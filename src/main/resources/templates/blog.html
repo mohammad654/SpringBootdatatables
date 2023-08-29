@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta th:include="fragments/head :: metas" th:remove="tag"/>
+  <title>Customer page</title>
+  <style th:include="fragments/head :: styles" th:remove="tag"/>
+  <script th:include="fragments/head :: scripts" th:remove="tag"/>
+  <script src="/js/customer.js"></script>
+
+  <script>
+        $( document ).ready(function() {
+            console.log( "initializing" );
+            init();
+        });
+    </script>
+
+</head>
+<body>
+<div th:insert="/fragments/menu :: menu">
+</div>
+<div th:insert="/fragments/header :: header">
+</div>
+
+
+<p>This is the blog page</p>
+
+<div th:insert="/fragments/footer :: footer">
+</div>
+
+</body>
+</html>
